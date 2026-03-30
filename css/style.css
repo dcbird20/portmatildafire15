@@ -1056,6 +1056,44 @@ select {
   color: var(--muted);
 }
 
+/* ─── Apparatus Cards ─────────────────────────────────── */
+.apparatus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.apparatus-card {
+  background: rgba(14, 32, 52, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+}
+
+.apparatus-card strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.15rem;
+}
+
+.apparatus-card span {
+  display: block;
+  font-size: 0.83rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.apparatus-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 /* ─── Gallery ─────────────────────────────────────────── */
 .gallery-grid {
   display: grid;
