@@ -11,7 +11,7 @@ Static single-page site for GitHub Pages with fundraising-forward navigation, Fa
 ## Content already wired in
 
 - Square donation and event checkout link: `https://square.link/u/k0PR4MgX`
-- PayPal / Venmo / Card donation link: existing PayPal donation URL
+- PayPal / Venmo / Card donation link: `https://www.paypal.com/donate?token=SiiFtpvdmOjosjTXrEJ0K4CzR1jkndv2vhMkj1loAqXoDzwT6CcprLCPt1q8vWCqXV6UaZmAUm59m-ym`
 - Facebook page: `https://www.facebook.com/PortMatildaFireCo/`
 - Contact info from the live contact page:
   - `101 East Plank Road`
@@ -27,6 +27,21 @@ Optional assets expected by the site:
 
 - `images/badge.jpg`: department badge or logo for the header
 - `images/station.jpg`: station or apparatus photo for the about section
+
+Imported legacy assets from the old WordPress site are in `images/legacy/`:
+
+- `smoke-detectors.jpg`
+- `volunteer_banner-300x150.jpg`
+- `FB_IMG_1529306091906-300x209.jpg`
+- `imagesPMFC-logo-color.jpg`
+- `KIMG0255.jpg`
+- `KIMG0258.jpg`
+- `KIMG0265.jpg`
+- `IMG_20200209_102621304_HDR.jpg`
+- `IMG_0593.jpeg`
+- `IMG_0589.jpeg`
+- `IMG_0626.jpeg`
+- `IMG_0622.jpeg`
 
 If either file is missing, the page still works.
 
@@ -57,16 +72,6 @@ If you do want the embedded feed:
 3. Set the source to the `main` branch and `/` root.
 4. If using the custom domain `portmatildafire15.com`, add it in GitHub Pages settings.
 5. Update DNS at the registrar to point to GitHub Pages.
-
-## Transfer package
-
-Run the packaging script from the repo root to create a clean zip archive for transfer:
-
-```bash
-./package-site.sh
-```
-
-That creates `dist/portmatildafire15-site.zip` containing the site files and image folder, excluding `.git`.
 
 ## Customization
 
