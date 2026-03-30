@@ -1,25 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Port Matilda Fire Company</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Port Matilda Fire Company #15 — An all-volunteer fire company serving Port Matilda and surrounding communities since 1929. Support us through donations and fundraising events.">
+  <title>Port Matilda Fire Company #15 | Serving Since 1929</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Port Matilda Fire Company</h1>
-    </header>
-    <main>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or need assistance, feel free to reach out to us.</p>
-            <p>Phone: <a href="tel:+18146924074">(814) 692-4074</a></p>
-            <p>Email: <a href="mailto:secretary@portmatildafire15.com">secretary@portmatildafire15.com</a>, <a href="mailto:president@portmatildafire15.com">president@portmatildafire15.com</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>Connect with us on Facebook: <a href="https://www.facebook.com/PortMatildaFireCo/">Facebook Page</a></p>
-        <p>Phone: <a href="tel:+18146924074">(814) 692-4074</a></p>
-    </footer>
+
+  <!-- ===== EMERGENCY BANNER (add class "active" to show) ===== -->
+  <div class="emergency-banner" id="emergencyBanner">
+    ⚠️ <strong>Emergency Alert:</strong> Update this text with any active emergency info.
+    <a href="#">Learn More</a>
+  </div>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="images/badge.png" alt="Port Matilda Fire Company #15 Badge" class="logo-img"
+             onerror="this.style.display='none'">
+        <div class="logo-text">
+          <h1>Port Matilda Fire Co. #15</h1>
+          <span>Serving Since 1929</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#safety">Safety</a>
+        <a href="#connect">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#join" class="btn-nav-secondary">Join Us</a>
+        <!-- PRIMARY NAV CTA: Donate via Square -->
+        <a href="#fundraising" class="btn-nav">❤️ Donate</a>
+      </nav>
+
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav overlay for mobile -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        All-Volunteer Fire Company
+      </div>
+      <h2>Protecting Port Matilda<br>Since 1929</h2>
+      <p>
+        Proudly serving Port Matilda and surrounding communities with fire suppression,
+        rescue, and emergency medical services — powered entirely by volunteers and
+        <strong>your generous support</strong>.
+      </p>
+      <div class="hero-buttons">
+        <!-- Square is the primary hero CTA -->
+        <a href="#fundraising" class="btn btn-primary btn-lg">❤️ Support Our Company</a>
+        <a href="#join" class="btn btn-secondary">🤝 Become a Volunteer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMPACT STATS BAR ===== -->
+  <section class="impact-bar">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-number">95+</div>
+          <div class="impact-label">Years Serving</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">81</div>
+          <div class="impact-label">Square Miles Covered</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">5,600+</div>
+          <div class="impact-label">Residents Protected</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-number">100%</div>
+          <div class="impact-label">Volunteer-Powered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUNDRAISING (moved UP — primary conversion section) ===== -->
+  <section class="section fundraising-section" id="fundraising">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Support Your Fire Company</span>
+        <h2>Every Dollar Keeps Us Ready</h2>
+        <p>We're 100% volunteer — your donations go directly to equipment, training, and keeping our community safe.</p>
+      </div>
+
+      <!-- DONATION CARDS -->
+      <div class="donate-options">
+        <!-- Square — PRIMARY -->
+        <div class="donate-card donate-card-featured">
+          <div class="donate-card-badge">Recommended</div>
+          <div class="donate-icon">💳</div>
+          <h3>Donate with Square</h3>
+          <p>Fast, secure donation with any credit or debit card. Supports one-time and custom amounts.</p>
+          <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Donate Now via Square</a>
+          <div class="donate-trust">
+            <span>🔒 Secure payment</span>
+            <span>💳 All cards accepted</span>
+          </div>
+        </div>
+
+        <!-- PayPal / Venmo / Card -->
+        <div class="donate-card">
+          <div class="donate-icon">💙</div>
+          <h3>PayPal, Venmo &amp; Card</h3>
+          <p>Donate with your PayPal account, Venmo, or any debit/credit card — all in one place.</p>
+          <a href="https://www.paypal.com/donate?token=oaC71SPMB4I5_t7z7rfB6JKN_WzgeGE4h-vCR-3UIAT9e2p5alV-stCPteg_Yk7vE_UEMHiDlEGB_Y2e" class="btn btn-outline" target="_blank" rel="noopener">Donate Now</a>
+          <div class="donate-trust">
+            <span>🅿️ PayPal</span>
+            <span>Ⓥ Venmo</span>
+            <span>💳 Debit/Credit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- YOUR DOLLARS AT WORK -->
+      <div class="impact-breakdown">
+        <h3>Your Donation at Work</h3>
+        <div class="impact-cards">
+          <div class="impact-card">
+            <div class="impact-card-amount">$25</div>
+            <p>Provides a firefighter with safety gloves and a hood</p>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-amount">$50</div>
+            <p>Funds a month of vehicle fuel for emergency responses</p>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-amount">$100</div>
+            <p>Covers training materials for a new volunteer recruit</p>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-amount">$250</div>
+            <p>Helps maintain and repair critical rescue equipment</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OTHER WAYS TO GIVE -->
+      <div class="other-giving">
+        <h3>Other Ways to Support Us</h3>
+        <div class="giving-grid">
+          <div class="giving-item">
+            <div class="giving-icon">📬</div>
+            <div>
+              <h4>Annual Fund Mailer</h4>
+              <p>Watch for our mailer in your mailbox — contributions accepted year-round through December.</p>
+            </div>
+          </div>
+          <div class="giving-item">
+            <div class="giving-icon">🎉</div>
+            <div>
+              <h4>Attend Our Events</h4>
+              <p>Join our meat raffles, trout tournament, and more. Ticket sales directly fund operations.</p>
+            </div>
+          </div>
+          <div class="giving-item">
+            <div class="giving-icon">🏢</div>
+            <div>
+              <h4>Business Sponsorship</h4>
+              <p>Local businesses can sponsor events or make corporate donations. <a href="#contact">Contact us</a> for details.</p>
+            </div>
+          </div>
+          <div class="giving-item">
+            <div class="giving-icon">🤝</div>
+            <div>
+              <h4>Volunteer Your Time</h4>
+              <p>Can't donate? Your time is just as valuable. <a href="#join">Join our team</a> — no experience needed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UPCOMING EVENTS (with ticket/purchase CTAs) ===== -->
+  <section class="section section-alt" id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What's Happening</span>
+        <h2>Upcoming Events</h2>
+        <p>Attend, participate, and support — every ticket and entry fee funds our mission.</p>
+      </div>
+
+      <div class="events-list">
+        <div class="event-item">
+          <div class="event-date">
+            <div class="month">Apr</div>
+            <div class="day">11</div>
+          </div>
+          <div class="event-info">
+            <h3>Bald Eagle Creek Trout Tournament</h3>
+            <p>Our annual fishing tournament is back! Join anglers from across the region.</p>
+            <div class="event-meta">📍 Bald Eagle Creek &nbsp;|&nbsp; April 11–12, 2026</div>
+          </div>
+          <div class="event-action">
+            <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Buy Entry →</a>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date">
+            <div class="month">Apr</div>
+            <div class="day">18</div>
+          </div>
+          <div class="event-info">
+            <h3>Spring Meat Raffle</h3>
+            <p>Great food, great prizes, great people. Don't miss our popular meat raffle event!</p>
+            <div class="event-meta">📍 Fire Station &nbsp;|&nbsp; April 18, 2026</div>
+          </div>
+          <div class="event-action">
+            <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get Tickets →</a>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date">
+            <div class="month">All</div>
+            <div class="day">Year</div>
+          </div>
+          <div class="event-info">
+            <h3>2026 Annual Fund Campaign</h3>
+            <p>Our annual fundraising campaign runs through December. Every dollar helps keep our equipment ready and our volunteers trained.</p>
+            <div class="event-meta">📬 Ongoing through December 31, 2026</div>
+          </div>
+          <div class="event-action">
+            <a href="#fundraising" class="btn btn-primary btn-sm">Donate Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="events-cta">
+        <a href="https://www.facebook.com/PortMatildaFireCo/" target="_blank" rel="noopener"
+           class="btn btn-outline">
+          📱 See All Events on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <span class="section-label">About Us</span>
+          <h2>Your Neighbors, Your Fire Company</h2>
+          <p>
+            Port Matilda Fire Company #15 is an all-volunteer organization
+            that has been serving the Port Matilda area since 1929. Our members respond to
+            structure fires, vehicle accidents, medical emergencies, and more — all while
+            balancing their own careers and families.
+          </p>
+          <p>
+            Our primary coverage area is approximately 81 square miles with a population of over
+            5,600 residents, covering Port Matilda Borough and Halfmoon, Huston, Taylor, and
+            Worth Townships. We also respond to surrounding areas to assist other fire and EMS companies.
+          </p>
+          <p>
+            <strong>We rely on community support to operate.</strong> Municipal contributions cover
+            only part of our budget — fundraising and donations from people like you make up the rest.
+          </p>
+          <div class="about-cta">
+            <a href="#fundraising" class="btn btn-primary">❤️ Help Fund Our Mission</a>
+          </div>
+        </div>
+        <div class="about-image">
+          <!-- Replace with your actual station photo: <img src="images/station.jpg" alt="Fire Station"> -->
+          <div class="about-image-placeholder">🏛️</div>
+          <div class="about-apparatus">
+            <h4>Our Apparatus</h4>
+            <ul>
+              <li>🚒 Engine</li>
+              <li>🚒 Engine-Tanker</li>
+              <li>🚒 Engine-Rescue</li>
+              <li>🚙 Brush Truck</li>
+              <li>🚧 Traffic Control Unit</li>
+              <li>🔧 Utility Unit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAFETY TIPS ===== -->
+  <section class="section section-alt" id="safety">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Stay Safe</span>
+        <h2>Safety Tips</h2>
+        <p>Simple steps to protect your home and family.</p>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🔥</div>
+          <div>
+            <h3>Smoke Detectors Save Lives</h3>
+            <p>Test smoke detectors monthly and change batteries at least once a year. Install detectors on every level of your home and inside bedrooms.</p>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🧯</div>
+          <div>
+            <h3>Fire Extinguisher Basics</h3>
+            <p>Keep a fire extinguisher on each floor and learn the P.A.S.S. technique: Pull, Aim, Squeeze, Sweep.</p>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">❄️</div>
+          <div>
+            <h3>Winter Hydrant Access</h3>
+            <p>Help us save time in an emergency — clear snow at least 3 feet around fire hydrants near your property.</p>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🚪</div>
+          <div>
+            <h3>Plan Your Escape</h3>
+            <p>Create and practice a home fire escape plan with two exits from every room. Designate a meeting spot outside.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MID-PAGE DONATION BANNER ===== -->
+  <section class="donate-banner">
+    <div class="container">
+      <div class="donate-banner-content">
+        <div class="donate-banner-text">
+          <h2>Help Us Stay Ready for the Next Call</h2>
+          <p>Every donation — big or small — directly funds the equipment, fuel, and training that keeps your neighbors safe.</p>
+        </div>
+        <div class="donate-banner-actions">
+          <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary btn-lg" target="_blank" rel="noopener">💳 Donate via Square</a>
+          <a href="https://www.paypal.com/donate?token=oaC71SPMB4I5_t7z7rfB6JKN_WzgeGE4h-vCR-3UIAT9e2p5alV-stCPteg_Yk7vE_UEMHiDlEGB_Y2e" class="btn btn-white" target="_blank" rel="noopener">PayPal / Venmo / Card</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOIN / VOLUNTEER ===== -->
+  <section class="section join-section" id="join">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Make a Difference</span>
+        <h2>Join Our Team</h2>
+        <p>No experience needed — we provide all the training. All you need is the desire to help your community.</p>
+      </div>
+
+      <div class="join-roles">
+        <div class="role-card">
+          <div class="role-icon">🚒</div>
+          <h3>Firefighter</h3>
+          <p>Respond to fires, vehicle accidents, and rescue calls. Full training provided through the state program.</p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🚑</div>
+          <h3>EMS / Medical</h3>
+          <p>Provide critical first response medical care when every second counts.</p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🤝</div>
+          <h3>Support &amp; Social</h3>
+          <p>Help with fundraisers, community events, maintenance, administration, and more.</p>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn btn-primary">📋 Get Started — Contact Us</a>
+    </div>
+  </section>
+
+  <!-- ===== NEWS & UPDATES (Facebook Live Feed) ===== -->
+  <section class="section social-section" id="connect">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">News &amp; Updates</span>
+        <h2>Latest from Port Matilda Fire Co.</h2>
+        <p>Real-time incident reports, community news, events, and more — straight from our Facebook page.</p>
+      </div>
+
+      <!-- Tab switcher -->
+      <div class="feed-tabs">
+        <button class="feed-tab active" data-tab="timeline">Recent Posts</button>
+        <button class="feed-tab" data-tab="events">Upcoming Events</button>
+      </div>
+
+      <!-- Facebook Page Plugin — Timeline -->
+      <div class="fb-embed-wrapper" id="fbTimeline">
+        <div id="fb-root"></div>
+        <div class="fb-page"
+             data-href="https://www.facebook.com/PortMatildaFireCo/"
+             data-tabs="timeline"
+             data-width="500"
+             data-height="700"
+             data-small-header="false"
+             data-adapt-container-width="true"
+             data-hide-cover="false"
+             data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/PortMatildaFireCo/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/PortMatildaFireCo/">Port Matilda Fire Co. 15</a>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Facebook Page Plugin — Events -->
+      <div class="fb-embed-wrapper" id="fbEvents" style="display:none;">
+        <div class="fb-page"
+             data-href="https://www.facebook.com/PortMatildaFireCo/"
+             data-tabs="events"
+             data-width="500"
+             data-height="700"
+             data-small-header="false"
+             data-adapt-container-width="true"
+             data-hide-cover="false"
+             data-show-facepile="false">
+          <blockquote cite="https://www.facebook.com/PortMatildaFireCo/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/PortMatildaFireCo/">Port Matilda Fire Co. 15 — Events</a>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Fallback when SDK doesn't load or JS is off -->
+      <div class="fb-fallback" id="fbFallback">
+        <div class="fb-fallback-inner">
+          <div class="fb-fallback-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#1877f2"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </div>
+          <h3>Port Matilda Fire Co. 15</h3>
+          <p class="fb-fallback-followers">6.3K followers</p>
+          <p class="fb-fallback-desc">Follow us for real-time incident updates, community news, event announcements, and fundraiser info.</p>
+          <a href="https://www.facebook.com/PortMatildaFireCo/" target="_blank" rel="noopener" class="btn btn-facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            View Our Facebook Page
+          </a>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/PortMatildaFireCo/" target="_blank" rel="noopener" class="social-link facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          Follow on Facebook — 6.3K Followers
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get in Touch</span>
+        <h2>Contact Us</h2>
+        <p>Have a question, want to volunteer, or need information? Reach out anytime.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h3>Station Address</h3>
+              <p>Port Matilda Volunteer Fire Company<br>
+                 101 East Plank Road<br>
+                 P.O. Box 472<br>
+                 Port Matilda, PA 16870</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h3>Phone</h3>
+              <p><a href="tel:+18146924074">(814) 692-4074</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:secretary@portmatildafire15.com">secretary@portmatildafire15.com</a><br>
+                <a href="mailto:president@portmatildafire15.com">president@portmatildafire15.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📘</div>
+            <div>
+              <h3>Facebook</h3>
+              <p><a href="https://www.facebook.com/PortMatildaFireCo" target="_blank" rel="noopener">
+                @PortMatildaFireCo
+              </a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.1!2d-77.9687!3d40.7908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cea4c4e4e4e4e5%3A0x0!2sPort+Matilda+PA+16870!5e0!3m2!1sen!2sus!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Port Matilda Fire Company Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Port Matilda Fire Co. #15</h3>
+          <p>An all-volunteer fire company proudly serving Port Matilda and surrounding communities since 1929. Your safety is our mission.</p>
+          <!-- Footer donate CTA -->
+          <div class="footer-donate">
+            <a href="#fundraising" class="btn btn-primary btn-sm">❤️ Donate Now</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#safety">Safety Tips</a></li>
+            <li><a href="#fundraising">Fundraising</a></li>
+            <li><a href="#join">Join / Volunteer</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>101 East Plank Road</p>
+          <p>P.O. Box 472</p>
+          <p>Port Matilda, PA 16870</p>
+          <p>(814) 692-4074</p>
+          <p style="margin-top: 12px;">
+            <a href="https://www.facebook.com/PortMatildaFireCo" target="_blank" rel="noopener">
+              📘 Facebook
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Port Matilda Fire Company #15. All rights reserved.</span>
+        <span>
+          <a href="#top">Back to Top ↑</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ===== STICKY DONATE BAR (mobile + desktop) ===== -->
+  <div class="sticky-donate" id="stickyDonate">
+    <div class="sticky-donate-inner">
+      <span class="sticky-donate-text">Support Port Matilda Fire Co.</span>
+      <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary btn-sm" target="_blank" rel="noopener">💳 Donate via Square</a>
+    </div>
+  </div>
+
+  <!-- Facebook SDK (async load)
+       ============================================================
+       IMPORTANT: Replace YOUR_APP_ID below with your Facebook App ID.
+       To get one:
+       1. Go to https://developers.facebook.com/apps/
+       2. Click "Create App" → choose "Business" type
+       3. Name it (e.g., "Port Matilda Fire Co Website")
+       4. Copy the App ID and paste it below
+       5. In App Settings → Basic, add your domain (portmatildafire15.com)
+       The Page Plugin will NOT display without a valid App ID.
+       ============================================================ -->
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=YOUR_APP_ID"
+    nonce="fb_pmfc15"></script>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
