@@ -13,13 +13,18 @@ const sectionLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"
 const trackedSections = sectionLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+const firstNavLink = sectionLinks[0] || null;
 
-function closeMenu() {
+function closeMenu(restoreFocus = false) {
   navToggle.classList.remove("is-open");
   siteNav.classList.remove("is-open");
   navScrim.classList.remove("is-visible");
   navToggle.setAttribute("aria-expanded", "false");
   document.body.style.overflow = "";
+
+  if (restoreFocus) {
+    navToggle.focus();
+  }
 }
 
 function openMenu() {
@@ -28,6 +33,10 @@ function openMenu() {
   navScrim.classList.add("is-visible");
   navToggle.setAttribute("aria-expanded", "true");
   document.body.style.overflow = "hidden";
+
+  if (firstNavLink) {
+    firstNavLink.focus();
+  }
 }
 
 function toggleMenu() {
@@ -127,6 +136,19 @@ revealTargets.forEach((target) => revealObserver.observe(target));
 navToggle?.addEventListener("click", toggleMenu);
 navScrim?.addEventListener("click", closeMenu);
 sectionLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+navToggle?.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    toggleMenu();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && siteNav.classList.contains("is-open")) {
+    closeMenu(true);
+  }
+});
 
 feedTabs.forEach((tab) => {
   tab.addEventListener("click", () => {

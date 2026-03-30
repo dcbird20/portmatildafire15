@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#content">Skip to main content</a>
+
   <div class="emergency-banner" id="emergencyBanner">
     <strong>Emergency Alert:</strong> Update this text with any active emergency information.
     <a href="#contact">Contact Us</a>
@@ -50,7 +52,7 @@
 
   <div class="nav-scrim" id="navScrim"></div>
 
-  <main>
+  <main id="content" tabindex="-1">
     <section class="hero">
       <div class="hero-backdrop"></div>
       <div class="container hero-layout">
@@ -93,8 +95,9 @@
       </div>
     </section>
 
-    <section class="impact-strip">
+    <section class="impact-strip" aria-labelledby="impact-heading">
       <div class="container impact-grid">
+        <h2 id="impact-heading" class="visually-hidden">Community Impact</h2>
         <article class="impact-item reveal">
           <strong>95+</strong>
           <span>Years Serving</span>
@@ -188,11 +191,11 @@
       </div>
     </section>
 
-    <section class="section" id="events">
+    <section class="section" id="events" aria-labelledby="events-heading">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">What's Happening</span>
-          <h2>Upcoming Events</h2>
+          <h2 id="events-heading">Upcoming Events</h2>
           <p>Fundraisers and community events are positioned as direct support opportunities, not side content.</p>
         </div>
 
@@ -296,11 +299,11 @@
       </div>
     </section>
 
-    <section class="section section-surface" id="safety">
+    <section class="section section-surface" id="safety" aria-labelledby="safety-heading">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">Stay Safe</span>
-          <h2>Simple Safety Reminders</h2>
+          <h2 id="safety-heading">Simple Safety Reminders</h2>
           <p>Keep the safety information practical and easy to scan.</p>
         </div>
 
@@ -355,11 +358,11 @@
       </div>
     </section>
 
-    <section class="section" id="join">
+    <section class="section" id="join" aria-labelledby="join-heading">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">Make a Difference</span>
-          <h2>Join the Team</h2>
+          <h2 id="join-heading">Join the Team</h2>
           <p>No previous experience is required. Training is provided for operational and support roles.</p>
         </div>
 
@@ -396,11 +399,11 @@
       </div>
     </section>
 
-    <section class="section section-surface" id="connect">
+    <section class="section section-surface" id="connect" aria-labelledby="news-heading">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag">News and Updates</span>
-          <h2>Latest From Facebook</h2>
+          <h2 id="news-heading">Latest From Facebook</h2>
           <p>Use the live Facebook feed when configured. If you do not want to set up a Meta developer app yet, the page falls back to a direct-follow card.</p>
         </div>
 
@@ -450,11 +453,11 @@
       </div>
     </section>
 
-    <section class="section section-dark-alt" id="contact">
+    <section class="section section-dark-alt" id="contact" aria-labelledby="contact-heading">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-tag light">Get in Touch</span>
-          <h2>Contact the Company</h2>
+          <h2 id="contact-heading">Contact the Company</h2>
           <p>Use the published contact information from the current site.</p>
         </div>
 
