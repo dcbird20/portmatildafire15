@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Port Matilda Fire Company #15//Event Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pmfc15-trout-2026@portmatildafire15.com
+DTSTAMP:20260330T000000Z
+DTSTART;VALUE=DATE:20260411
+DTEND;VALUE=DATE:20260413
+SUMMARY:Bald Eagle Creek Trout Tournament
+DESCRIPTION:Annual fishing tournament supporting Port Matilda Fire Company #15 operations.
+LOCATION:Bald Eagle Creek\, Port Matilda\, PA
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

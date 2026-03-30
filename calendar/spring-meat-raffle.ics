@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Port Matilda Fire Company #15//Event Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pmfc15-meat-raffle-2026@portmatildafire15.com
+DTSTAMP:20260330T000000Z
+DTSTART;VALUE=DATE:20260418
+DTEND;VALUE=DATE:20260419
+SUMMARY:Spring Meat Raffle
+DESCRIPTION:Community fundraiser supporting Port Matilda Fire Company #15.
+LOCATION:Port Matilda Fire Station\, Port Matilda\, PA
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

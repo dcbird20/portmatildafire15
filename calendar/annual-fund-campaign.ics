@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Port Matilda Fire Company #15//Event Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pmfc15-fund-campaign-2026@portmatildafire15.com
+DTSTAMP:20260330T000000Z
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20270101
+SUMMARY:Annual Fund Campaign
+DESCRIPTION:Year-round campaign to support equipment\, training\, and station readiness.
+LOCATION:Port Matilda\, PA
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

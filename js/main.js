@@ -9,6 +9,8 @@ const eventsPanel = document.getElementById("eventsPanel");
 const facebookFallback = document.getElementById("facebookFallback");
 const feedTabs = Array.from(document.querySelectorAll(".feed-tab"));
 const revealTargets = Array.from(document.querySelectorAll(".reveal"));
+const trackedCtas = Array.from(document.querySelectorAll("[data-track]"));
+const volunteerForm = document.getElementById("volunteerForm");
 const sectionLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
 const trackedSections = sectionLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
@@ -114,6 +116,72 @@ function maybeShowFacebookFallback() {
   }, 6000);
 }
 
+function trackCta(name) {
+  if (!name) {
+    return;
+  }
+
+  const payload = {
+    event: "cta_click",
+    cta_name: name,
+    page_path: window.location.pathname,
+    timestamp: new Date().toISOString(),
+  };
+
+  // Track in GA4 when available.
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "cta_click", {
+      cta_name: name,
+      page_path: window.location.pathname,
+    });
+  }
+
+  // Track in Plausible when available.
+  if (typeof window.plausible === "function") {
+    window.plausible("CTA Click", { props: { cta_name: name } });
+  }
+
+  // Keep a local fallback counter that can be inspected from devtools.
+  try {
+    const key = "pmfc15_cta_clicks";
+    const existing = JSON.parse(localStorage.getItem(key) || "{}");
+    existing[name] = (existing[name] || 0) + 1;
+    localStorage.setItem(key, JSON.stringify(existing));
+  } catch {
+    // Ignore storage errors in private browsing modes.
+  }
+
+  console.info("[CTA]", payload);
+}
+
+function handleVolunteerFormSubmit(event) {
+  event.preventDefault();
+
+  if (!volunteerForm) {
+    return;
+  }
+
+  const formData = new FormData(volunteerForm);
+  const name = String(formData.get("name") || "").trim();
+  const email = String(formData.get("email") || "").trim();
+  const phone = String(formData.get("phone") || "").trim();
+  const role = String(formData.get("role") || "").trim();
+  const notes = String(formData.get("notes") || "").trim();
+
+  if (!name || !email || !role) {
+    volunteerForm.reportValidity();
+    return;
+  }
+
+  const subject = encodeURIComponent("Volunteer Interest - Port Matilda Fire Co. #15");
+  const body = encodeURIComponent(
+    `Volunteer Interest Submission\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\nRole Interest: ${role}\n\nAvailability / Notes:\n${notes || "Not provided"}`,
+  );
+
+  trackCta("volunteer_form_submit");
+  window.location.href = `mailto:secretary@portmatildafire15.com?cc=president@portmatildafire15.com&subject=${subject}&body=${body}`;
+}
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -155,6 +223,14 @@ feedTabs.forEach((tab) => {
     showFeedPanel(tab.dataset.target);
   });
 });
+
+trackedCtas.forEach((element) => {
+  element.addEventListener("click", () => {
+    trackCta(element.getAttribute("data-track"));
+  });
+});
+
+volunteerForm?.addEventListener("submit", handleVolunteerFormSubmit);
 
 backToTop?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });

@@ -835,6 +835,11 @@ select {
   font-weight: 700;
 }
 
+.event-actions {
+  display: grid;
+  gap: 0.55rem;
+}
+
 .section-cta {
   display: flex;
   justify-content: center;
@@ -844,6 +849,46 @@ select {
 .about-grid {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
   align-items: start;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  padding: 1.3rem;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.metric-card h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2.7rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.metric-card p {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+}
+
+.metrics-note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-weight: 700;
 }
 
 .about-copy {
@@ -921,6 +966,65 @@ select {
 .safety-grid,
 .role-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.volunteer-form-wrap {
+  margin-top: 1.5rem;
+  padding: 1.4rem;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.volunteer-form-wrap h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.volunteer-form-wrap p {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+.volunteer-form {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.volunteer-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.volunteer-form input,
+.volunteer-form select,
+.volunteer-form textarea {
+  width: 100%;
+  padding: 0.72rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--text);
+}
+
+.volunteer-form textarea {
+  resize: vertical;
+}
+
+.volunteer-form-full,
+.volunteer-form button {
+  grid-column: 1 / -1;
+}
+
+.form-helper {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 .role-grid {
@@ -1183,7 +1287,8 @@ select {
   }
 
   .support-grid,
-  .safety-grid {
+  .safety-grid,
+  .metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1244,10 +1349,15 @@ select {
   .role-grid,
   .support-grid,
   .safety-grid,
+  .metrics-grid,
   .impact-cards,
   .impact-grid,
   .apparatus-list ul,
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .volunteer-form {
     grid-template-columns: 1fr;
   }
 

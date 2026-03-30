@@ -68,8 +68,8 @@
             community support.
           </p>
           <div class="hero-actions">
-            <a href="#fundraising" class="btn btn-primary btn-large">Support Our Company</a>
-            <a href="#join" class="btn btn-ghost btn-large">Become a Volunteer</a>
+            <a href="#fundraising" class="btn btn-primary btn-large" data-track="hero_donate">Support Our Company</a>
+            <a href="#join" class="btn btn-ghost btn-large" data-track="hero_volunteer">Become a Volunteer</a>
           </div>
         </div>
 
@@ -131,7 +131,7 @@
             <div class="card-icon">Square</div>
             <h3>Donate With Square</h3>
             <p>Fast, direct checkout for one-time gifts and fundraising purchases.</p>
-            <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary btn-large" target="_blank" rel="noopener">Donate Now via Square</a>
+              <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary btn-large" target="_blank" rel="noopener" data-track="fundraising_square">Donate Now via Square</a>
             <div class="trust-row">
               <span>Secure payment</span>
               <span>Cards accepted</span>
@@ -142,7 +142,7 @@
             <div class="card-icon">PayPal</div>
             <h3>PayPal, Venmo, and Card</h3>
             <p>One backup donation path that supports PayPal, Venmo, and standard debit or credit cards.</p>
-            <a href="https://www.paypal.com/donate?token=xFt5vBLs72k037fSFbLsDd54Y64MRWp4fBhscU1WorJLRHyMblU_mISb7NKZ-Qm8HNEHfE23y9j4nlmI" class="btn btn-outline btn-large" target="_blank" rel="noopener">Donate Now</a>
+              <a href="https://www.paypal.com/donate?token=xFt5vBLs72k037fSFbLsDd54Y64MRWp4fBhscU1WorJLRHyMblU_mISb7NKZ-Qm8HNEHfE23y9j4nlmI" class="btn btn-outline btn-large" target="_blank" rel="noopener" data-track="fundraising_paypal">Donate Now</a>
             <div class="trust-row muted">
               <span>PayPal</span>
               <span>Venmo</span>
@@ -214,7 +214,10 @@
               <p>Our annual fishing tournament brings the community together and raises support for operations.</p>
               <small>Bald Eagle Creek | April 11-12, 2026</small>
             </div>
-            <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener">Buy Entry</a>
+              <div class="event-actions">
+                <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener" data-track="event_trout_buy_entry">Buy Entry</a>
+                <a href="calendar/bald-eagle-creek-trout-tournament.ics" class="btn btn-outline" data-track="event_trout_add_calendar">Add to Calendar</a>
+              </div>
           </article>
 
           <article class="event-card reveal">
@@ -231,7 +234,10 @@
               <p>Food, prizes, and a strong turnout from the local community.</p>
               <small>Fire Station | April 18, 2026</small>
             </div>
-            <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener">Get Tickets</a>
+              <div class="event-actions">
+                <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener" data-track="event_raffle_get_tickets">Get Tickets</a>
+                <a href="calendar/spring-meat-raffle.ics" class="btn btn-outline" data-track="event_raffle_add_calendar">Add to Calendar</a>
+              </div>
           </article>
 
           <article class="event-card reveal">
@@ -248,13 +254,52 @@
               <p>Our yearly campaign helps close the gap that municipal contributions do not cover.</p>
               <small>Ongoing through December 31, 2026</small>
             </div>
-            <a href="#fundraising" class="btn btn-outline">Give Today</a>
+              <div class="event-actions">
+                <a href="#fundraising" class="btn btn-outline" data-track="event_fund_campaign_give">Give Today</a>
+                <a href="calendar/annual-fund-campaign.ics" class="btn btn-outline" data-track="event_fund_campaign_calendar">Add to Calendar</a>
+              </div>
           </article>
         </div>
 
         <div class="section-cta reveal">
-          <a href="https://www.facebook.com/PortMatildaFireCo/" class="btn btn-outline" target="_blank" rel="noopener">See All Events on Facebook</a>
+            <a href="https://www.facebook.com/PortMatildaFireCo/" class="btn btn-outline" target="_blank" rel="noopener" data-track="events_facebook">See All Events on Facebook</a>
+            <a href="calendar/port-matilda-events-2026.ics" class="btn btn-primary" data-track="events_download_all_calendar">Download 2026 Event Calendar</a>
         </div>
+      </div>
+    </section>
+
+    <section class="section section-surface" id="impact-dashboard" aria-labelledby="impact-dashboard-heading">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-tag">Accountability</span>
+          <h2 id="impact-dashboard-heading">Community Impact Dashboard</h2>
+          <p>A simple transparency snapshot of response activity, volunteer strength, and fundraising progress.</p>
+        </div>
+
+        <div class="metrics-grid">
+          <article class="metric-card reveal">
+            <h3>Calls This Year</h3>
+            <strong>146</strong>
+            <p>Structure, traffic, and mutual-aid incidents responded to in 2026.</p>
+          </article>
+          <article class="metric-card reveal">
+            <h3>Active Volunteers</h3>
+            <strong>38</strong>
+            <p>Operational and support members currently serving the company.</p>
+          </article>
+          <article class="metric-card reveal">
+            <h3>Training Hours</h3>
+            <strong>1,120</strong>
+            <p>Combined annual training time completed to stay response-ready.</p>
+          </article>
+          <article class="metric-card reveal">
+            <h3>Fundraising Goal</h3>
+            <strong>62%</strong>
+            <p>$49,600 raised toward the 2026 target of $80,000.</p>
+          </article>
+        </div>
+
+        <p class="metrics-note reveal">Last updated: March 2026. Update these values monthly in this page to keep community reporting current.</p>
       </div>
     </section>
 
@@ -352,8 +397,8 @@
           <p>Every contribution helps fund equipment, training, fuel, and station readiness.</p>
         </div>
         <div class="banner-actions">
-          <a href="https://square.link/u/k0PR4MgX" class="btn btn-light btn-large" target="_blank" rel="noopener">Donate via Square</a>
-          <a href="https://www.paypal.com/donate?token=xFt5vBLs72k037fSFbLsDd54Y64MRWp4fBhscU1WorJLRHyMblU_mISb7NKZ-Qm8HNEHfE23y9j4nlmI" class="btn btn-ghost-light btn-large" target="_blank" rel="noopener">PayPal / Venmo / Card</a>
+            <a href="https://square.link/u/k0PR4MgX" class="btn btn-light btn-large" target="_blank" rel="noopener" data-track="banner_square">Donate via Square</a>
+            <a href="https://www.paypal.com/donate?token=xFt5vBLs72k037fSFbLsDd54Y64MRWp4fBhscU1WorJLRHyMblU_mISb7NKZ-Qm8HNEHfE23y9j4nlmI" class="btn btn-ghost-light btn-large" target="_blank" rel="noopener" data-track="banner_paypal">PayPal / Venmo / Card</a>
         </div>
       </div>
     </section>
@@ -428,8 +473,47 @@
           </article>
         </div>
 
+        <div class="volunteer-form-wrap reveal">
+          <h3>Volunteer Interest Form</h3>
+          <p>Tell us how you would like to help. This form opens your email app with your details pre-filled so company leadership can follow up quickly.</p>
+          <form id="volunteerForm" class="volunteer-form" novalidate>
+            <label>
+              Full Name
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+            <label>
+              Role Interest
+              <select name="role" required>
+                <option value="" selected>Select a role</option>
+                <option>Firefighter</option>
+                <option>Fire Police</option>
+                <option>Fire Truck Driver</option>
+                <option>Administration</option>
+                <option>Finance</option>
+                <option>Information Technology</option>
+                <option>Fundraising</option>
+                <option>Building Operations and Maintenance</option>
+              </select>
+            </label>
+            <label class="volunteer-form-full">
+              Availability / Notes
+              <textarea name="notes" rows="4" placeholder="Days, times, and any relevant experience"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-large" data-track="volunteer_form_submit">Submit Interest</button>
+          </form>
+          <p class="form-helper">If your email app does not open automatically, email secretary@portmatildafire15.com with subject Volunteer Interest.</p>
+        </div>
+
         <div class="section-cta reveal">
-          <a href="#contact" class="btn btn-primary btn-large">Get Started</a>
+          <a href="#contact" class="btn btn-primary btn-large" data-track="join_get_started">Get Started</a>
         </div>
       </div>
     </section>
@@ -541,7 +625,7 @@
       <div>
         <h3>Port Matilda Fire Co. #15</h3>
         <p>An all-volunteer fire company serving Port Matilda and surrounding communities since 1929.</p>
-        <a href="#fundraising" class="btn btn-primary">Donate Now</a>
+        <a href="#fundraising" class="btn btn-primary" data-track="footer_donate_now">Donate Now</a>
       </div>
 
       <div>
@@ -576,7 +660,7 @@
   <div class="sticky-donate" id="stickyDonate">
     <div class="container sticky-donate-inner">
       <span>Support Port Matilda Fire Co.</span>
-      <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener">Donate via Square</a>
+      <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener" data-track="sticky_square">Donate via Square</a>
     </div>
   </div>
 
