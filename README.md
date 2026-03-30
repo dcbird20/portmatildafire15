@@ -11,7 +11,7 @@ Static single-page site for GitHub Pages with fundraising-forward navigation, Fa
 ## Content already wired in
 
 - Square donation and event checkout link: `https://square.link/u/k0PR4MgX`
-- PayPal / Venmo / Card donation link: `https://www.paypal.com/donate?token=SiiFtpvdmOjosjTXrEJ0K4CzR1jkndv2vhMkj1loAqXoDzwT6CcprLCPt1q8vWCqXV6UaZmAUm59m-ym`
+- PayPal / Venmo / Card donation link: `https://www.paypal.com/donate?token=xFt5vBLs72k037fSFbLsDd54Y64MRWp4fBhscU1WorJLRHyMblU_mISb7NKZ-Qm8HNEHfE23y9j4nlmI`
 - Facebook page: `https://www.facebook.com/PortMatildaFireCo/`
 - Contact info from the live contact page:
   - `101 East Plank Road`
