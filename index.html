@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#content">Skip to main content</a>
@@ -76,7 +77,7 @@
         <aside class="hero-card reveal">
           <span class="hero-card-label">Fundraising Focus</span>
           <h2>Every Dollar Keeps Us Ready</h2>
-          <p>Your support helps fund equipment, fuel, training, and the day-to-day readiness our volunteers depend on.</p>
+          <p>Your support helps fund equipment, facilities, training, and the day-to-day readiness our volunteers depend on.</p>
           <dl class="hero-points">
             <div>
               <dt>Square</dt>
@@ -199,71 +200,10 @@
           <p>Fundraisers and community events are positioned as direct support opportunities, not side content.</p>
         </div>
 
-        <div class="event-list">
-          <article class="event-card reveal">
-            <div class="event-date">
-              <span>Apr</span>
-              <strong>11</strong>
-            </div>
-            <div class="event-media media-frame">
-              <img class="media-img" style="object-position: center 26%;" src="images/legacy/KIMG0255.jpg" alt="Firefighters preparing equipment during training" loading="lazy">
-              <span class="media-caption">Tournament Support Crew</span>
-            </div>
-            <div class="event-copy">
-              <h3>Bald Eagle Creek Trout Tournament</h3>
-              <p>Our annual fishing tournament brings the community together and raises support for operations.</p>
-              <small>Bald Eagle Creek | April 11-12, 2026</small>
-            </div>
-              <div class="event-actions">
-                <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener" data-track="event_trout_buy_entry">Buy Entry</a>
-                <a href="calendar/bald-eagle-creek-trout-tournament.ics" class="btn btn-outline" data-track="event_trout_add_calendar">Add to Calendar</a>
-              </div>
-          </article>
-
-          <article class="event-card reveal">
-            <div class="event-date">
-              <span>Apr</span>
-              <strong>18</strong>
-            </div>
-            <div class="event-media media-frame">
-              <img class="media-img" style="object-position: center 31%;" src="images/legacy/KIMG0258.jpg" alt="Community members at a fire company fundraiser" loading="lazy">
-              <span class="media-caption">Raffle Night Community</span>
-            </div>
-            <div class="event-copy">
-              <h3>Spring Meat Raffle</h3>
-              <p>Food, prizes, and a strong turnout from the local community.</p>
-              <small>Fire Station | April 18, 2026</small>
-            </div>
-              <div class="event-actions">
-                <a href="https://square.link/u/k0PR4MgX" class="btn btn-primary" target="_blank" rel="noopener" data-track="event_raffle_get_tickets">Get Tickets</a>
-                <a href="calendar/spring-meat-raffle.ics" class="btn btn-outline" data-track="event_raffle_add_calendar">Add to Calendar</a>
-              </div>
-          </article>
-
-          <article class="event-card reveal">
-            <div class="event-date alt">
-              <span>All</span>
-              <strong>Year</strong>
-            </div>
-            <div class="event-media media-frame">
-              <img class="media-img" style="object-position: center 38%;" src="images/legacy/IMG_20200209_102621304_HDR.jpg" alt="Fire company team and apparatus ready for response" loading="lazy">
-              <span class="media-caption">Equipment and Team Readiness</span>
-            </div>
-            <div class="event-copy">
-              <h3>Annual Fund Campaign</h3>
-              <p>Our yearly campaign helps close the gap that municipal contributions do not cover.</p>
-              <small>Ongoing through December 31, 2026</small>
-            </div>
-              <div class="event-actions">
-                <a href="#fundraising" class="btn btn-outline" data-track="event_fund_campaign_give">Give Today</a>
-                <a href="calendar/annual-fund-campaign.ics" class="btn btn-outline" data-track="event_fund_campaign_calendar">Add to Calendar</a>
-              </div>
-          </article>
-        </div>
+        <div id="event-list" class="event-list"></div>
 
         <div class="section-cta reveal">
             <a href="https://www.facebook.com/PortMatildaFireCo/" class="btn btn-outline" target="_blank" rel="noopener" data-track="events_facebook">See All Events on Facebook</a>
-            <a href="calendar/port-matilda-events-2026.ics" class="btn btn-primary" data-track="events_download_all_calendar">Download 2026 Event Calendar</a>
         </div>
       </div>
     </section>
@@ -354,6 +294,17 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-tag">In the Field</span>
+          <h2 id="gallery-heading">Photo Gallery</h2>
+          <p>A look at our volunteers, apparatus, and community events in action.</p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
       </div>
     </section>
 

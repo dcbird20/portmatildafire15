@@ -247,8 +247,87 @@ window.addEventListener("resize", () => {
   }
 });
 
+async function loadEvents() {
+  const container = document.getElementById("event-list");
+  if (!container) return;
+
+  try {
+    const data = await fetch("/data/events.json").then((r) => r.json());
+    const events = data.events || [];
+
+    if (events.length === 0) {
+      container.innerHTML = "<p>No upcoming events. Check back soon!</p>";
+      return;
+    }
+
+    container.innerHTML = events
+      .map(
+        (ev) => `
+      <article class="event-card reveal">
+        <div class="event-date${ev.all_year ? " alt" : ""}">
+          <span>${ev.month}</span>
+          <strong>${ev.day}</strong>
+        </div>
+        ${ev.image ? `<div class="event-media media-frame"><img class="media-img" src="${ev.image}" alt="${ev.title}" loading="lazy">${ev.image_caption ? `<span class="media-caption">${ev.image_caption}</span>` : ""}</div>` : ""}
+        <div class="event-copy">
+          <h3>${ev.title}</h3>
+          <p>${ev.description}</p>
+          ${ev.date_display ? `<small>${ev.location ? ev.location + " | " : ""}${ev.date_display}</small>` : ""}
+        </div>
+        ${ev.button_label ? `<div class="event-actions"><a href="${ev.button_url}" class="btn btn-primary"${ev.button_url && !ev.button_url.startsWith("#") ? " target=\"_blank\" rel=\"noopener\"" : ""}>${ev.button_label}</a>${ev.calendar_file ? `<a href="${ev.calendar_file}" class="btn btn-outline">Add to Calendar</a>` : ""}</div>` : ""}
+      </article>`,
+      )
+      .join("");
+
+    container.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+    container.querySelectorAll("[data-track]").forEach((el) => {
+      el.addEventListener("click", () => trackCta(el.getAttribute("data-track")));
+    });
+  } catch (e) {
+    console.warn("[Events] Failed to load events.json", e);
+  }
+}
+
+async function loadGallery() {
+  const section = document.getElementById("gallery");
+  const grid = document.getElementById("gallery-grid");
+  if (!section || !grid) return;
+
+  try {
+    const data = await fetch("/data/gallery.json").then((r) => r.json());
+    const photos = data.photos || [];
+
+    if (photos.length === 0) {
+      section.classList.add("is-hidden");
+      return;
+    }
+
+    grid.innerHTML = photos
+      .map(
+        (p) => `<figure class="gallery-item reveal"><img src="${p.photo}" alt="${p.caption}" loading="lazy"><figcaption>${p.caption}</figcaption></figure>`,
+      )
+      .join("");
+
+    grid.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+  } catch (e) {
+    console.warn("[Gallery] Failed to load gallery.json", e);
+  }
+}
+
 window.addEventListener("load", () => {
   setActiveLink();
   toggleUtilityButtons();
   maybeShowFacebookFallback();
+  loadEvents();
+  loadGallery();
 });
+
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", (user) => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}

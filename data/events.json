@@ -1,0 +1,46 @@
+{
+  "events": [
+    {
+      "title": "Bald Eagle Creek Trout Tournament",
+      "all_year": false,
+      "month": "Apr",
+      "day": "11",
+      "location": "Bald Eagle Creek",
+      "date_display": "April 11-12, 2026",
+      "description": "Our annual fishing tournament brings the community together and raises support for operations.",
+      "image": "images/legacy/KIMG0255.jpg",
+      "image_caption": "Tournament Support Crew",
+      "button_label": "Buy Entry",
+      "button_url": "https://square.link/u/k0PR4MgX",
+      "calendar_file": "calendar/bald-eagle-creek-trout-tournament.ics"
+    },
+    {
+      "title": "Spring Meat Raffle",
+      "all_year": false,
+      "month": "Apr",
+      "day": "18",
+      "location": "Fire Station",
+      "date_display": "April 18, 2026",
+      "description": "Food, prizes, and a strong turnout from the local community.",
+      "image": "images/legacy/KIMG0258.jpg",
+      "image_caption": "Raffle Night Community",
+      "button_label": "Get Tickets",
+      "button_url": "https://square.link/u/k0PR4MgX",
+      "calendar_file": "calendar/spring-meat-raffle.ics"
+    },
+    {
+      "title": "Annual Fund Campaign",
+      "all_year": true,
+      "month": "All",
+      "day": "Year",
+      "location": "",
+      "date_display": "Ongoing through December 31, 2026",
+      "description": "Our yearly campaign helps close the gap that municipal contributions do not cover.",
+      "image": "images/legacy/IMG_20200209_102621304_HDR.jpg",
+      "image_caption": "Equipment and Team Readiness",
+      "button_label": "Give Today",
+      "button_url": "#fundraising",
+      "calendar_file": "calendar/annual-fund-campaign.ics"
+    }
+  ]
+}

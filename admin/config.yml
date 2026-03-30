@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: events
+    label: Events
+    files:
+      - name: events
+        label: Upcoming Events
+        file: data/events.json
+        fields:
+          - name: events
+            label: Events
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: "All-Year Event? (check for ongoing campaigns)", name: all_year, widget: boolean, default: false }
+              - { label: "Month Label (e.g. Apr)", name: month, widget: string }
+              - { label: "Day Label (e.g. 11)", name: day, widget: string }
+              - { label: "Location (optional)", name: location, widget: string, required: false }
+              - { label: "Date Display (e.g. April 11-12, 2026)", name: date_display, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: "Event Photo (optional)", name: image, widget: image, required: false }
+              - { label: "Photo Caption (optional)", name: image_caption, widget: string, required: false }
+              - { label: "Button Label (e.g. Buy Entry)", name: button_label, widget: string, required: false }
+              - { label: "Button URL", name: button_url, widget: string, required: false }
+              - { label: "Calendar File (.ics path, e.g. calendar/my-event.ics)", name: calendar_file, widget: string, required: false }
+
+  - name: gallery
+    label: Photo Gallery
+    files:
+      - name: gallery
+        label: Photo Gallery
+        file: data/gallery.json
+        fields:
+          - name: photos
+            label: Photos
+            widget: list
+            fields:
+              - { label: Caption, name: caption, widget: string }
+              - { label: Photo, name: photo, widget: image }
+              - { label: "Date Taken (optional)", name: date, widget: date, required: false }
